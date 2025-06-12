@@ -32,7 +32,7 @@ export default function Hero() {
             animate="visible"
             transition={{ duration: 0.5 }}
           >
-            Hi<span className="text-palette-4">,</span> I&apos;m Isai
+            नमस्ते<span className="text-palette-4">,</span> I&apos;m Rahul
             <span className="text-palette-4">.</span>
           </motion.h1>
 
@@ -76,7 +76,7 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
         >
           <Image
-            src="/assets/mebw.JPG"
+            src="/assets/me.jpg"
             alt="Mirror film selfie"
             fill
             sizes="(max-width: 640px) 208px, (max-width: 768px) 256px, (max-width: 1024px) 320px, (max-width: 1280px) 400px, 470px"
