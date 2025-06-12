@@ -4,6 +4,23 @@ import * as motion from "framer-motion/client";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+// import { MorphingText } from "./ui/liquid-text";
+
+// const texts = [
+//   "राम राम",
+//   "नमस्ते",
+//   "नमस्कार",
+//   "ਹੈਲੋ",
+//   "নমস্কার",
+//   "హలో",
+//   "வணக்கம்",
+//   "سلام",
+//   "હલો",
+//   "ಹಲೋ",
+//   "ନମସ୍କାର",
+//   "Hello"
+// ];
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -25,29 +42,32 @@ export default function Hero() {
     <section className="my-10 md:my-24 lg:my-32">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 md:gap-12 text-palette-2">
         <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left max-w-xl">
-          <motion.h1
-            className="font-bold text-5xl md:text-6xl"
-            variants={fadeInLeft}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5 }}
-          >
-            नमस्ते<span className="text-palette-4">,</span> I&apos;m Rahul
-            <span className="text-palette-4">.</span>
-          </motion.h1>
+        <motion.h1
+  className="font-bold text-5xl md:text-6xl"
+  variants={fadeInLeft}
+  initial="hidden"
+  animate="visible"
+  transition={{ duration: 0.5 }}
+>
+   {/* <MorphingText texts={texts} /> */}
+   खम्माघणी
+   
+   <span className="text-palette-4">,</span> I&apos;m Rahul
+  <span className="text-palette-4">.</span>
+</motion.h1>
 
-          <motion.p
-            className="text-md md:text-lg text-balance"
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <span className="text-palette-4">Mechanical Engineer</span> and
-            freelance <span className="text-palette-4">Software Developer</span>{" "}
-            trained in CAD, robotics, and simple web development. I love
-            transforming innovative designs to life.
-          </motion.p>
+<motion.p
+  className="text-md md:text-lg text-balance"
+  variants={fadeInUp}
+  initial="hidden"
+  animate="visible"
+  transition={{ delay: 0.2, duration: 0.5 }}
+>
+  <span className="text-palette-4">Software Engineer</span>, freelancer, and
+  <span className="text-palette-4"> Digital Product Designer</span> from Rajasthan.
+  Passionate about my culture and building efficient, scalable, and user-friendly software solutions. Always learning, always creating.
+</motion.p>
+
 
           <motion.div
             variants={fadeInLeft}

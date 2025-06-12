@@ -78,7 +78,7 @@ export default function About() {
                   my education, hobbies, and life experiences, so here it is :)
                   Feel free to reach out!
                   <EmailToast className="inline-flex gap-1 text-md text-palette-4 hover:underline focus:outline-none items-center">
-                    isaisanchezcc@gmail.com
+                    rahuljangir.works@gmail.com
                   </EmailToast>
                 </p>
                 <p className="text-md text-pretty text-left">
@@ -130,7 +130,7 @@ export default function About() {
                   everything in between. I&apos;d love to hear your feedback or
                   chat about any of these topics, so feel free to reach out!
                   <EmailToast className="inline-flex gap-1 text-md text-palette-4 hover:underline focus:outline-none items-center">
-                    isaisanchezcc@gmail.com
+                    rahuljangir.works@gmail.com
                   </EmailToast>
                 </p>
                 <p>

@@ -4,11 +4,20 @@ import { Mail } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/app/lib/utils";
 
+import { Footerdemo } from "./ui/footer-section";
+
+
 export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer
+
+    <>
+     <div className="block">
+      <Footerdemo />
+    </div>
+
+    {/* <footer
       className={cn(
         "backdrop-blur-md p-2 z-20 relative",
         pathname === "/gallery"
@@ -22,12 +31,14 @@ export default function Footer() {
         </div>
         <div className="flex justify-between items-center space-x-2">
           <h4 className="font-bold pr-2">
-            <a href="mailto:isaisanchezcc@gmail.com">
+            <a href="mailto:rahuljangir.works@gmail.com">
               <Mail className="w-4 md:w-5" />
             </a>
           </h4>
         </div>
       </div>
-    </footer>
+    </footer> */}
+    </>
+   
   );
 }
