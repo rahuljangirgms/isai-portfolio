@@ -1,0 +1,23 @@
+portfolio/
+├── app/
+│   ├── api/
+│   │   └── wakatime/
+│   │       └── route.ts          # API route to fetch WakaTime stats
+│   ├── components/
+│   │   ├── CodingStats.tsx       # Component to display WakaTime stats
+│   │   ├── Navbar.tsx            # Navigation bar component
+│   │   └── Footer.tsx            # Footer component
+│   ├── layout.tsx                # Main layout with Navbar and Footer
+│   ├── page.tsx                  # Homepage
+│   └── styles/
+│       ├── globals.css           # Global styles
+│       └── Home.module.css       # Styles for the homepage
+├── public/
+│   ├── images/
+│   │   └── profile.jpg           # Profile image
+│   └── favicon.ico               # Favicon
+├── .env.local                    # Environment variables (e.g., WAKATIME_API_KEY)
+├── .gitignore                    # Git ignore file
+├── next.config.js                # Next.js configuration
+├── package.json                  # Project dependencies and scripts
+└── README.md                     # Project documentation
