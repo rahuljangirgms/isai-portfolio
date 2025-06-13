@@ -1,23 +1,143 @@
-portfolio/
+.
+├── .vscode/
+│   └── settings.json  # VS Code settings
 ├── app/
-│   ├── api/
-│   │   └── wakatime/
-│   │       └── route.ts          # API route to fetch WakaTime stats
+│   ├── api/           # API routes (if you have any serverless functions)
+│   │   ├── discord.ts
+│   │   ├── github.ts
+│   │   └── wakatime.ts
+│   ├── blog/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx # Individual blog post page
+│   │   └── page.tsx     # Blog index page
 │   ├── components/
-│   │   ├── CodingStats.tsx       # Component to display WakaTime stats
-│   │   ├── Navbar.tsx            # Navigation bar component
-│   │   └── Footer.tsx            # Footer component
-│   ├── layout.tsx                # Main layout with Navbar and Footer
-│   ├── page.tsx                  # Homepage
-│   └── styles/
-│       ├── globals.css           # Global styles
-│       └── Home.module.css       # Styles for the homepage
-├── public/
-│   ├── images/
-│   │   └── profile.jpg           # Profile image
-│   └── favicon.ico               # Favicon
-├── .env.local                    # Environment variables (e.g., WAKATIME_API_KEY)
-├── .gitignore                    # Git ignore file
-├── next.config.js                # Next.js configuration
-├── package.json                  # Project dependencies and scripts
-└── README.md                     # Project documentation
+│   │   ├── cards/       # UI components for cards
+│   │   │   ├── blog-cards.tsx
+│   │   │   ├── bento-grid.tsx
+│   │   │   ├── CodingStats.tsx
+│   │   │   ├── post-cards.tsx
+│   │   │   ├── post-cards-skeleton.tsx
+│   │   │   └── split-card.tsx
+│   │   ├── media/       # Components for displaying media
+│   │   │   ├── icons/   # SVG icons
+│   │   │   │   ├── arduino.tsx
+│   │   │   │   ├── cpp.tsx
+│   │   │   │   ├── next-js.tsx
+│   │   │   │   ├── numpy.tsx
+│   │   │   │   ├── python.tsx
+│   │   │   │   ├── raspbi.tsx
+│   │   │   │   ├── react.tsx
+│   │   │   │   ├── solidworks.tsx
+│   │   │   │   ├── tailwindcss.tsx
+│   │   │   │   └── typescript.tsx
+│   │   │   ├── gallery-container.tsx
+│   │   │   ├── gallery-grid.tsx
+│   │   │   ├── gallery-loading.tsx
+│   │   │   ├── standalone-beam-animation.tsx
+│   │   │   └── thumbnail.tsx
+│   │   ├── mdx/         # Components used within MDX posts
+│   │   │   ├── beam-animation.tsx
+│   │   │   ├── dropdown.tsx
+│   │   │   ├── inverted-pendulum.tsx
+│   │   │   ├── mdx.tsx
+│   │   │   ├── noteworthy.tsx
+│   │   │   ├── robot-scene.tsx
+│   │   │   ├── wander-behavior-diagram.tsx
+│   │   │   └── work-in-progress.tsx
+│   │   ├── model/       # Components related to 3D models
+│   │   │   ├── loader.jsx
+│   │   │   ├── my-robot.jsx
+│   │   │   └── scene.jsx
+│   │   ├── navigation/  # Navigation components
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── nav-bar.tsx
+│   │   │   └── socials.tsx
+│   │   ├── ui/          # Reusable UI components (from shadcn/ui or similar)
+│   │   │   ├── avatar.tsx
+│   │   │   ├── badge.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── checkbox.tsx
+│   │   │   ├── email-toast.tsx
+│   │   │   ├── footer-section.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── liquid-text.tsx
+│   │   │   ├── select.tsx
+│   │   │   ├── separator.tsx
+│   │   │   ├── skeleton.tsx
+│   │   │   ├── switch.tsx
+│   │   │   ├── textarea.tsx
+│   │   │   ├── toast.tsx
+│   │   │   ├── toaster.tsx
+│   │   │   ├── tooltip.tsx
+│   │   │   ├── tracing-beam.tsx
+│   │   │   └── use-toast.ts
+│   │   ├── about.tsx
+│   │   ├── footer.tsx
+│   │   └── hero.tsx
+│   ├── gallery/
+│   │   └── page.tsx     # Gallery index page
+│   ├── lib/           # Utility functions and hooks
+│   │   ├── api/         # API related helper functions
+│   │   │   ├── discord.ts
+│   │   │   ├── github.ts
+│   │   │   └── wakatime.ts
+│   │   ├── fonts.ts
+│   │   ├── gallery.ts
+│   │   ├── get-text-color.ts
+│   │   ├── posts.ts
+│   │   ├── time.ts
+│   │   ├── types.ts
+│   │   └── utils.ts
+│   ├── styles/        # Global styles
+│   │   ├── globals.css
+│   │   └── highlight.css
+│   ├── types/         # TypeScript type definitions
+│   │   ├── index.d.ts
+│   │   └── wretch.d.ts
+│   ├── layout.tsx     # Root layout
+│   └── page.tsx       # Home page
+├── posts/         # Blog posts in MDX format
+│   ├── antsimulator.mdx
+│   ├── beam-deflection.mdx
+│   ├── bfs.mdx
+│   ├── inverted-pendulum-1.mdx
+│   ├── neovim-installation.mdx
+│   ├── robotarm.mdx
+│   └── wishlist-app.mdx
+├── public/        # Static assets
+│   ├── assets/      # General assets
+│   │   ├── ants-simulation.mp4
+│   │   ├── bfs-visualizer-screenshot1.png
+│   │   ├── grainy-texture.png
+│   │   ├── ilogo.png
+│   │   ├── inverted_pendulum_matplotlib.png
+│   │   ├── me.jpg
+│   │   ├── mebw.JPG
+│   │   ├── myrobot.svg
+│   │   ├── shepherd.jpg
+│   │   └── wishlist-app-screenshot.png
+│   ├── gallery/     # Gallery images
+│   │   ├── beebutt.jpg
+│   │   ├── break.jpg
+│   │   ├── horses.JPG
+│   │   ├── phoenix.jpg
+│   │   ├── sunset.jpg
+│   │   └── volcano.jpg
+│   ├── model/       # 3D models
+│   │   ├── robot.bin
+│   │   └── robot.gltf
+│   └── favicon.ico
+├── components.json    # likely related to shadcn/ui configuration
+├── env.mjs            # Environment variables
+├── file-structure.txt # (This can be deleted or used for documentation)
+├── next.config.js     # Next.js configuration
+├── next.config.mjs    # Next.js configuration (alternative format)
+├── package-lock.json  # npm lock file
+├── package.json       # npm package file
+├── pnpm-lock.yaml     # pnpm lock file (if you use pnpm)
+├── postcss.config.mjs # PostCSS configuration
+├── tailwind.config.ts # Tailwind CSS configuration
+├── tsconfig.json      # TypeScript configuration
+└── README.md          # Project README
