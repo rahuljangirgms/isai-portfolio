@@ -9,7 +9,7 @@ import { Skeleton } from "@/app/components/ui/skeleton"
 import { DiscordActivityCard } from "./discord-activity-card"
 
 import { env } from "@/app/lib/utils"
-import { DiscordApiResponse, DiscordApiContent, Activity } from "@/app/types"
+import { DiscordApiResponse, DiscordApiContent, Activity } from "@/app/types/index"
 import useWebSocket, { ReadyState } from "react-use-websocket"
 
 interface MessageData {
@@ -95,9 +95,9 @@ export function DiscordActivity() {
                 <DiscordStatus data={data.data} />
                 <div className="flex flex-grow flex-col gap-2">
                   {!data ||
-                  !data.data ||
-                  !data.data.activities ||
-                  data.data.activities.length === 0 ? (
+                    !data.data ||
+                    !data.data.activities ||
+                    data.data.activities.length === 0 ? (
                     <Alert className="bg-muted">
                       <AlertDescription>
                         No activities currently.
@@ -107,7 +107,7 @@ export function DiscordActivity() {
                     <>
                       {/* Render custom status with no other activities */}
                       {data.data.activities.length === 1 &&
-                      data.data.activities[0].name === "Custom Status" ? (
+                        data.data.activities[0].name === "Custom Status" ? (
                         <>
                           {data?.data?.activities?.map(
                             (activity: Activity) =>

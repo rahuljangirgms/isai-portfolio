@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react"
 
 import { getRepo } from "@/app/lib/api/github"
 import { getTextColor } from "@/app/lib/get-text-color"
-import { Repo } from "@/app/types"
+import { Repo } from "@/app/types/index"
 
 import { Badge } from "@/app/components/ui/badge"
 import {
@@ -15,7 +15,7 @@ import {
 } from "@/app/components/ui/card"
 
 function getLanguageColor(language: string): string {
-  const languageColors: {[key: string]: string} = {
+  const languageColors: { [key: string]: string } = {
     'HTML': '#d96b40', // HTML: Softer Orange
     'JavaScript': '#dab860', // JavaScript: Muted Yellow
     'Python': '#4B8BBE', // Python: Soft Blue

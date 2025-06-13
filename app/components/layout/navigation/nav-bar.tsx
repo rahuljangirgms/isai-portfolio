@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { TentTreeIcon, Menu, X, AtSign } from "lucide-react";
 import { useState } from "react";
-import DropdownMenu from "@/app/components/navigation/dropdown-menu";
+import DropdownMenu from "@/app/components/layout/navigation/dropdown-menu";
 import { motion, AnimatePresence } from "framer-motion";
-import Socials from "@/app/components/navigation/socials";
+import Socials from "@/app/components/layout/navigation/socials";
 
 const links = [
   {

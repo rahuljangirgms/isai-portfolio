@@ -8,7 +8,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/app/components/ui/alert"
 import { ElapsedTime } from "@/app/components/timer/elapsed-time"
 import { ProgressBar } from "@/app/components/timer/progress-bar"
 
-import { DiscordApiResponse, Activity } from "@/app/types"
+import { DiscordApiResponse, Activity } from "@/app/types/index"
 
 interface DiscordActivityCardProps {
   activity: Activity
@@ -25,8 +25,8 @@ export function DiscordActivityCard({
         <Tooltip>
           <TooltipTrigger>
             {activity.assets &&
-            activity.assets.large_image &&
-            activity.assets.large_image.startsWith("spotify:") ? (
+              activity.assets.large_image &&
+              activity.assets.large_image.startsWith("spotify:") ? (
               <img
                 src={data.data.spotify.album_art_url}
                 width={90}
@@ -60,7 +60,7 @@ export function DiscordActivityCard({
                   borderRadius: "0.25rem",
                 }}
               >
-               
+
               </div>
             )}
           </TooltipTrigger>
@@ -81,8 +81,8 @@ export function DiscordActivityCard({
         </AlertDescription>
         <AlertDescription className="flex justify-center sm:block">
           {activity.timestamps &&
-          activity.timestamps.start &&
-          activity.timestamps.end ? (
+            activity.timestamps.start &&
+            activity.timestamps.end ? (
             <ProgressBar
               start={activity.timestamps.start}
               end={activity.timestamps.end}

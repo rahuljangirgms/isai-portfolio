@@ -1,10 +1,12 @@
 import { getCodingStats } from "@/app/lib/api/wakatime"
-import { Languages as LanguagesType } from "@/app/types"
+import { Languages as LanguagesType } from "@/app/types/index"
 
 import { HeadingText } from "@/app/components/common/heading-text"
 import { Languages } from "@/app/components/pages/dashboard/languages"
 import { CodeTime } from "@/app/components/pages/dashboard/code-time"
 import { DiscordActivity } from "@/app/components/pages/dashboard/discord-activity"
+
+
 
 export const metadata = {
   title: "Dashboard",

@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card"
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts"
-import { LanguageData } from "@/app/types" // Import LanguageData type
+import { LanguageData } from "@/app/types/index" // Import LanguageData type
 
 interface LanguagesProps {
   languages: LanguageData[]  // Use the renamed type here

@@ -1,4 +1,4 @@
-import { DiscordApiResponse, Status } from "@/app/types"
+import { DiscordApiResponse, Status } from "@/app/types/index"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar"
 
@@ -24,7 +24,7 @@ export function DiscordStatus(data: DiscordApiResponse) {
           <Avatar>
             <AvatarImage
               src={`https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${data.data.discord_user.avatar}`}
-            />    
+            />
             <AvatarFallback>P</AvatarFallback>
           </Avatar>
         </div>
@@ -41,7 +41,7 @@ export function DiscordStatus(data: DiscordApiResponse) {
         className="flex items-center gap-2"
         style={{ color: statusInfo.color }}
       >
-       
+
         <span className="text-sm">{statusInfo.text}</span>
       </div>
     </div>

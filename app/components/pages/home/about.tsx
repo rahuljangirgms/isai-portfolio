@@ -7,7 +7,7 @@ import {
 } from "@/app/components/cards/split-card";
 import EmailToast from "@/app/components/ui/email-toast";
 import { useState } from "react";
-import { cn } from "../lib/utils";
+import { cn } from "../../../lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 

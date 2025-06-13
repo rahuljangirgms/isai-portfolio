@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { space_grotesk } from "@/app/lib/fonts";
 import "@/app/styles/globals.css";
-import Footer from "@/app/components/footer";
+import { Footer } from "./components/layout/footer";
 import { Toaster } from "@/app/components/ui/toaster";
-import NavBar from "@/app/components/navigation/nav-bar";
+import NavBar from "@/app/components/layout/navigation/nav-bar";
 
 export const metadata: Metadata = {
   title: {
